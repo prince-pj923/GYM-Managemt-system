@@ -1,0 +1,14 @@
+<% layout("/layouts/boilerplate") %>
+<div class="pro-det">
+    <div class="pro-show">
+        <h3><b><%= listing.name %></b></h3>
+    </div>
+    <div class="pro-img">
+        <img src="<%= listing.image.url %> " alt="photo" />
+        </div>
+        <div class="img-body">
+            <p>Description: <%= listing.description %></p><br>
+            <p>Price: &#8377;<%= listing.price%></p><br>
+            <p>Amount: <%= listing.amount %></p>
+            </div>
+</div>

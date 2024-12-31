@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate") %>
+    <div class="row mt-3 mem-edit">
+    <div class="col-8 offset-2">
+    <h3 class="text-info">Add new member</h3>
+    <form method="post" action="/home/admin/new" novalidate class="needs-validation">
+        <div class="mb-3">
+            <label for="Name" 
+            class="form-label">Name</label>
+            <input name="member[name]" 
+            placeholder="Add Member Name" 
+            type="text"
+            class="form-control"
+            required
+            />
+        <div class="valid-feedback">Name looks good!</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" 
+            class="form-label">Image Link</label>
+            <input name="member[image]" 
+            placeholder="Enter URL/Link" 
+            type="text"  
+            class="form-control" />
+        </div>
+        
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="age" 
+            class="form-label">Age</label>
+            <input name="member[age]" 
+            placeholder="35" 
+            class="form-control" 
+            required 
+            />
+            <div class="invalid-feedback">Please enter age</div>
+        </div>
+
+        <div class="mb-3 col-4 con">
+            <label for="country" 
+            class="form-label">Contact</label>
+            <input name="member[contact]" 
+            placeholder="00000"  
+            class="form-control"
+            required
+            />
+            <div class="invalid-feedback">Please enter valid Contact</div>
+        </div>
+
+        <div class="mb-3 col-8">
+            <label for="adress" class="form-label">Adress</label>
+            <textarea name="member[adress]"  
+            class="form-control" 
+            required
+            ></textarea>
+            
+            <div class="invalid-feedback">Please enter adress</div>
+        </div>
+        </div>
+
+        <br /><br />
+        <button class="btn btn-info  mb-3 col-2">Add</button>
+        <br /> <br />
+        </form>
+    </div>
+    </div>

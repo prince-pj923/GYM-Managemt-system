@@ -1,0 +1,20 @@
+<% layout("/layouts//boilerplate") %>
+<div class="mem-pro">
+    <div class="mem-name">
+        <%= member.name %>
+    </div>
+    <div class="mem-pho">
+        <img src="<%= member.image.url%>" alt="Member image" />
+    </div>
+    <div class="mem-abo">
+        <p>Age: <%= member.age %></p> <br />
+        <p>Contact: <%= member.contact %></p> <br />
+        <p>Adress: <%= member.adress %></p>
+    </div>
+</div>
+<div class="edit-btn">
+    <a href="/home/admin/<%= member._id %>/edit"><button class= "edit">Edit</button></a>
+    <form method="post" action="/home/admin/<%= member._id %>?_method=DELETE">
+        <button class="edit">Delete</button>
+    </form>
+</div>

@@ -1,0 +1,15 @@
+<% layout("/layouts/boilerplate") %>
+<div class="mem-det">
+        <% for(let Member of allMember) { %>
+            <a href="/home/admin/<%= Member._id %>" class="mem-link" >
+            <div class="hum-img">
+                <img src="<%= Member.image.url %>" class="mem-img" />
+            <div class="human-body">
+                <p class="human-text">
+                    <%= Member.name %>
+                </p>
+            </div>
+            </a>
+            </div>
+       <% } %>
+</div>

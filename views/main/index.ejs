@@ -1,0 +1,16 @@
+<% layout("/layouts/boilerplate") %> <!-- Corrected the layout inclusion syntax -->
+<div class="card-one">
+    <% for(let listing of allListing) { %> <!-- Consistent variable name "allListings" -->
+        <a href="/home/store/<%= listing._id %>" class="listing-link">
+        <div class="listing-card">
+            <img src="<%= listing.image.url %>" class="list-img" />
+            <div class="card-body">
+                <p class="card-text">
+                    <b><%= listing.name %> <br></b>
+                    &#8377;<%= listing.price %>
+                </p>
+            </div>
+        </a>
+        </div>
+    <% } %> 
+</div>

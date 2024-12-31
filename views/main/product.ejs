@@ -1,0 +1,64 @@
+<% layout("/layouts/boilerplate") %>
+    <div class="row mt-3 mem-edit">
+    <div class="col-8 offset-2">
+    <h3 class="text-info">Add New Product</h3>
+    <form method="post" action="/home/admin/newproduct" novalidate class="needs-validation">
+        <div class="mb-3">
+            <label for="Name" 
+            class="form-label">Name</label>
+            <input name="listing[name]" 
+            placeholder="Add Product Name" 
+            type="text"
+            class="form-control"
+            required
+            />    
+        <div class="valid-feedback">Add a Cachy Name</div>
+        </div>
+
+        <div class="mb-3 col-8">
+            <label for="adress" class="form-label">Description</label>
+            <textarea name="listing[description]"  class="form-control" required></textarea>
+            
+            <div class="invalid-feedback">Please enter short description</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" 
+            class="form-label">Image Link</label>
+            <input name="listing[image]" 
+            placeholder="Enter URL/Link" 
+            type="text"  
+            class="form-control" />
+        </div>
+        
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="Amount" 
+            class="form-label">Amount</label>
+            <input name="listing[amount]" 
+            placeholder="1Kg" 
+            type="text"
+            class="form-control" 
+            required
+            />
+            <div class="invalid-feedback">Please enter amount</div>
+        </div>
+
+        <div class="mb-3 col-4 con">
+            <label for="price" 
+            class="form-label">Price</label>
+            <input name="listing[price]" 
+            placeholder="999" 
+            class="form-control"
+            required
+            />
+            <div class="invalid-feedback">Please enter Price</div>
+        </div>
+        </div>
+
+        <br /><br />
+        <button class="btn btn-info  mb-3 col-2">Add</button>
+        <br /> <br />
+        </form>
+    </div>
+    </div>
